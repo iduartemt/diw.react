@@ -1,4 +1,5 @@
 import MagiaDoJSX from '@/components/MagiaDoJSX/MagiaDoJSX'
+import Link from 'next/link'
 
 export default function page() {
   return (
@@ -9,3 +10,11 @@ export default function page() {
     </div>
   )
 }
+
+<header className='flex flex-col items-center'>
+  <h1>React & Next.js</h1>
+  <nav className='flex gap-4'>
+    <link href="/">Intro</link>
+    <link href="/sobre">Sobre</link>
+  </nav>
+</header>
