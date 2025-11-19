@@ -1,5 +1,4 @@
 import MagiaDoJSX from '@/components/MagiaDoJSX/MagiaDoJSX'
-import Link from 'next/link'
 
 export default function page() {
   return (
@@ -16,5 +15,6 @@ export default function page() {
   <nav className='flex gap-4'>
     <link href="/">Intro</link>
     <link href="/sobre">Sobre</link>
+    <link href="/tecnologias">Tecnologias</link>
   </nav>
 </header>
