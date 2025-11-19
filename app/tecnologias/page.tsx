@@ -18,7 +18,6 @@ const tecnologias = JSON.parse(JSON.stringify(tecnologiasJson)) as {
       <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {tecnologias.map((tec, i) => (
           <div
-            key={i}
             className="bg-white shadow-md rounded-xl p-5 text-center flex flex-col items-center gap-3 a"
           >
             <Image
