@@ -12,7 +12,7 @@ export default function CaracteristicasPage() {
             <h2>Características do React e Next.js</h2>
 
             {caracteristicas.map((caracteristica, i) => {
-                return <li key={i}>caracteristica</li>
+                return <li key={i}>{caracteristica}</li>
             })}
         </>
     )

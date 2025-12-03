@@ -1,26 +1,35 @@
-import { tecnologias } from '@/data/tecnologias'
-import Tecnologia from '@/components/Tecnologias/Tecnologias';
+// app/tecnologias/page.tsx
+import TecnologiaCard from '@/components/TecnologiaCard/TecnologiaCard';
+import tecnologiasData from '@/app/data/tecnologias.json';
+
+// Definição da interface (é uma boa prática usar TypeScript)
+interface Tecnologia {
+  title: string;
+  image: string;
+  description: string;
+  rating: number;
+}
 
 export default function TecnologiasPage() {
-
+  const tecnologias: Tecnologia[] = tecnologiasData;
+  
   return (
-    <main className="p-6">
-      <h2 className="text-3xl font-bold text-center mb-8">
+    <div className="p-4 sm:p-8">
+      <h2 className="text-4xl font-extrabold text-center mb-10 text-blue-600">
         Tecnologias Exploradas
       </h2>
-      <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {tecnologias.map((tecnologia, i) => (
-          <div key={i} className="bg-white shadow-md rounded-xl p-5 text-center flex flex-col items-center gap-3"
-          >
-            <Tecnologia
-              title={tecnologia.title}
-              image={tecnologia.image}
-              description={tecnologia.description}
-              rating={tecnologia.rating}
-            />
-          </div>
+      
+      {/* Container para os cards */}
+      <div className="flex flex-wrap justify-center items-center">
+        {tecnologias.map((tec, index) => (
+          <TecnologiaCard 
+            key={index}
+            index={index}
+            title={tec.title}
+            image={tec.image}
+          />
         ))}
-      </section>
-    </main>
+      </div>
+    </div>
   );
 }
